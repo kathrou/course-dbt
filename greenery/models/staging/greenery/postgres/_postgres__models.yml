@@ -1,0 +1,69 @@
+version: 2
+
+models:
+
+  - name: stg_greenery__addresses 
+    description: Addresses on the platform
+    columns: 
+      - name: address_uuid 
+      - name: address
+      - name: zipcode
+      - name: state
+      - name: country
+  - name: stg_greenery__orders
+    description: Orders 
+    columns: 
+      - name: order_uuid, 
+      - name: user_uuid,
+      - name: promo_id,
+      - name: delivery_address,
+      - name: created_at,
+      - name: order_cost,
+      - name: shipping_cost,
+      - name: order_total,
+      - name: tracking_number,
+      - name: shipping_service,
+      - name: estimated_delivery_at,
+      - name: delivered_at,
+      - name: order_status
+  - name: stg_greenery__events
+    description: Events
+    columns: 
+      - name: event_uuid, 
+      - name: session_uuid,
+      - name: user_uuid,
+      - name: page_url,
+      - name: created_at,
+      - name: created_at,
+      - name: order_uuid,
+      - name: created_at
+  - name: stg_greenery__order_items
+    description: Order Items
+    columns: 
+      - name: order_uuid, 
+      - name: product_uuid,
+      - name: quantity
+  - name: stg_greenery__products
+    description: Products
+    columns: 
+      - name: product_uuid, 
+      - name: product_name,
+      - name: product_price,
+      - name: inventory_amount
+  - name: stg_greenery__promos
+    description: Promos
+    columns: 
+      - name: promo_uuid, 
+      - name: discount,
+      - name: promo_status
+  - name: stg_greenery__users
+    description: Users
+    columns: 
+      - name: user_uuid, 
+      - name: first_name,
+      - name: last_name,
+      - name: email, 
+      - name: phone_number, 
+      - name: created_at,
+      - name: updated_at,
+      - name: address_uuid

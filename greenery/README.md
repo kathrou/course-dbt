@@ -12,9 +12,9 @@
 
 ###  How many users have only made one purchase? Two purchases? Three+ purchases?
 
-1 purchase: 25
-2 purchases: 28
-3+  purchases: 71
+- 1 purchase: 25
+- 2 purchases: 28
+- 3+  purchases: 71
 
 ### On average, how many unique sessions do we have per hour?
 

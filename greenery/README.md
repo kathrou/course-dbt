@@ -18,4 +18,4 @@
 
 ### On average, how many unique sessions do we have per hour?
 
-6 sessions per hour on average
+16 sessions per hour on average

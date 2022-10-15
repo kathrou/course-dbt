@@ -29,7 +29,8 @@
 _Repeat Rate = Users who purchased 2 or more times / users who purchased_
 
 ```
-WITH purchase_amount AS(
+WITH purchase_amount AS (
+
     SELECT 
         user_uuid,
         CASE WHEN count(DISTINCT order_uuid) < 2 THEN 'purchased_once'
@@ -37,12 +38,18 @@ WITH purchase_amount AS(
         END AS purchase_amount
     FROM DEV_DB.DBT_LISKJ94.STG_GREENERY__ORDERS
     GROUP BY 1
-), total AS(
+    
+), 
 
-    SELECT COUNT(purchase_amount) AS total, 
-           COUNT(CASE purchase_amount WHEN 'multiple_purchases' THEN 1 ELSE NULL END) AS total_multiple_purchases
+total AS(
+
+    SELECT 
+        COUNT(purchase_amount) AS total, 
+        COUNT(CASE purchase_amount WHEN 'multiple_purchases' THEN 1 ELSE NULL END) AS total_multiple_purchases
     FROM purchase_amount
 )
     
-SELECT div0(total_multiple_purchases,total) AS repeat_rate FROM TOTAL;
+SELECT 
+    div0(total_multiple_purchases,total) AS repeat_rate 
+FROM TOTAL;
 ```

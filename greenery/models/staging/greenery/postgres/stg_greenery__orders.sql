@@ -6,15 +6,18 @@
 }}
 
 WITH orders_source AS (
-    SELECT * FROM {{ source('src_greenery', 'orders')}}
+
+    SELECT * 
+    FROM {{ source('src_greenery', 'orders')}}
+    
 ),
 
 renamed AS (
     SELECT 
         order_id                AS order_uuid, 
         user_id                 AS user_uuid,
-        promo_id                AS promo_id,
-        address_id              AS delivery_address,
+        promo_id                AS promo_uuid,
+        address_id              AS address_uuid,
         created_at              AS created_at,
         order_cost              AS order_cost,
         shipping_cost           AS shipping_cost,

@@ -53,3 +53,11 @@ SELECT
     div0(total_multiple_purchases,total) AS repeat_rate 
 FROM TOTAL;
 ```
+
+#### What are good indicators of a user who will likely purchase again? What about indicators of users who are likely NOT to purchase again? If you had more data, what features would you want to look into to answer this question?
+
+I'd look into which products are popular amongst users who purchase multiple times and use that as an indicator for users who are likely to purchase again. We could also look into number of sessions, money spent on purchases, number of items purchased, and delivery time. 
+
+I'd love to know more about customers' satisfaction with our product and customer service. 
+
+

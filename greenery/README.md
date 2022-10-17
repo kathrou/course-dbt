@@ -61,3 +61,8 @@ I'd look into which products are popular amongst users who purchase multiple tim
 I'd love to know more about customers' satisfaction with our product and customer service. 
 
 
+#### DAG
+
+
+<img width="1455" alt="Screen Shot 2022-10-17 at 16 26 25" src="https://user-images.githubusercontent.com/20020382/196301970-9f83a9e1-6eff-427f-bf78-dee34e9d8d5d.png">
+

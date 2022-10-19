@@ -44,6 +44,7 @@ final AS (
 
         --data
         o.address_uuid            AS address_uuid,
+        o.promo_uuid              AS promo_uuid,
         o.created_at              AS created_at,
         o.order_cost              AS order_cost,
         o.shipping_cost           AS shipping_cost,

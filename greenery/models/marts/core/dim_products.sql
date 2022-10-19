@@ -29,7 +29,7 @@ final AS (
         product_price            AS product_price,
         inventory_amount         AS inventory_amount,
         total_sold               AS total_sold
-    FROM products p
+    FROM products 
     LEFT JOIN total_sold 
         USING(product_uuid)
 

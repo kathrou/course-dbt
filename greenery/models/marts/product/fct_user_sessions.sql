@@ -11,13 +11,6 @@ WITH user_sessions AS (
 
 ),
 
-users AS (
-
-    SELECT *
-    FROM {{ref('dim_users')}}
-
-)
-
 final AS (
 
     SELECT *

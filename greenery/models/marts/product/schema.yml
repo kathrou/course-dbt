@@ -1,0 +1,23 @@
+version: 2
+
+models:
+
+  - name: fct_user_sessions
+    description: Sessions from users in the platform
+    columns: 
+      - name: user_uuid
+        tests:
+          - not_null
+      - name: event_uuid
+        tests:
+          - not_null
+      - name: session_uuid
+        tests:
+          - not_null
+      - name: last_session_event
+      - name: first_session_event
+      - name: session_length
+      - name: added_to_cart
+      - name: checked_out
+      - name: package_shipped
+      - name: page_view

@@ -1,0 +1,92 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: A product-grain table with product information incluying total sold
+    columns:
+      - name: product_uuid
+        description: Product Unique Identifier
+        tests:
+          - not_null
+          - unique
+      - name: product_name
+        description: Product name
+        tests:
+          - not_null
+          - unique
+      - name: product_price
+        description: Product price
+        tests:
+          - not_null
+      - name: inventory_amount
+        description: Product Inventory amount
+        tests:
+          - not_null
+      - name: total_sold
+        description: Total Units Sold
+  - name: dim_users
+    description: A user-grain table which includes user's personal information and purchases
+    columns:
+      - name: user_uuid
+        description: User Unique Identifier
+        tests:
+          - not_null
+          - unique
+      - name: first_name
+        description: User's first name
+        tests:
+          - not_null
+      - name: last_name
+        description: User's last name
+        tests:
+          - not_null
+      - name: email 
+        description: User's email
+        tests:
+          - not_null
+      - name: phone_number
+        description: User's phone number
+      - name: created_at
+        description: User's created at date
+        tests:
+          - not_null
+      - name: updated_at
+        description: User's updated at date
+        tests:
+          - not_null
+      - name: address_uuid
+        description: Address Unique Identifier
+        tests:
+          - not_null
+      - name: user_lifetime_purchases
+        description: User's Lifetime Purchases
+      - name: date_last_order
+        description: User's date of last order
+  - name: fct_orders
+    description: An order-grain table
+    columns:
+      - name: order_uuid
+        description: Order Unique Identifier
+        tests:
+          - not_null
+      - name: user_uuid
+        description: User Unique Identifier
+        tests:
+          - not_null
+      - name: address_uuid
+        description: Address Unique Identifier
+        tests:
+          - not_null
+      - name: promo_uuid
+        description: Promo Unique Identifier
+      - name: created_at
+      - name: order_cost
+      - name: shipping_cost
+      - name: order_total
+      - name: tracking_number
+      - name: shipping_service
+      - name: estimated_delivery_at
+      - name: delivered_at
+      - name: order_status
+      - name: order_quantity
+      - name: order_discount

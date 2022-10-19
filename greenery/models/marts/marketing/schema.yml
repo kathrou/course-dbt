@@ -1,0 +1,31 @@
+version: 2
+
+models:
+
+  - name: fct_user_orders 
+    description: Orders from users in the platform
+    columns: 
+      - name: order_uuid
+        tests:
+          - not_null
+          - unique
+      - name: user_uuid
+        tests:
+          - not_null
+      - name: address_uuid
+        tests:
+          - not_null
+      - name: created_at
+        tests:
+          - not_null
+      - name: order_cost
+      - name: shipping_cost
+      - name: order_total
+      - name: tracking_number
+      - name: shipping_service
+      - name: estimated_delivery_at
+      - name: delivered_at
+      - name: order_status
+      - name: order_quantity
+      - name: order_discount
+      - name: days_since_last_order

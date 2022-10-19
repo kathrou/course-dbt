@@ -9,7 +9,7 @@
 WITH orders AS (
 
     SELECT *
-    FROM {{ref('int_orders')}}
+    FROM {{ref('fct_orders')}}
 
 ),
 
@@ -30,9 +30,9 @@ promos AS (
 final AS (
     SELECT 
         -- primary key
-        orders.order_uuid                              AS order_uuid,
+        orders.order_uuid                         AS order_uuid,
 
-        --data
+        orders.user_uuid                          AS user_uuid,
         orders.address_uuid                       AS address_uuid,
         orders.created_at                         AS created_at,
         orders.order_cost                         AS order_cost,

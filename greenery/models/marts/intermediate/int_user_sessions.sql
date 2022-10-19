@@ -7,7 +7,7 @@
 WITH events AS (
 
     SELECT *
-    FROM {{ref('stg_greenery__events')}}
+    FROM {{ref('int_events')}}
 
 ), 
 
@@ -50,7 +50,6 @@ final AS (
         ON event_type_aggregate.session_uuid = events.session_uuid
 
 )
-
 
 SELECT * 
 FROM final

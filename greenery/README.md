@@ -61,6 +61,10 @@ I'd look into which products are popular amongst users who purchase multiple tim
 I'd love to know more about customers' satisfaction with our product and customer service. 
 
 
+#### Models
+
+I organized my models in 2 layers: Intermediate and dim/fact tables. I did most of the data transformation in my intermediate tables which I then used to create my dims and facts. 
+
 #### DAG
 
 

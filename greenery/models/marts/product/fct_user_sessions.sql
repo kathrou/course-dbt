@@ -13,7 +13,9 @@ WITH user_sessions AS (
 
 final AS (
 
-    SELECT *
+    SELECT         
+        {{ dbt_utils.surrogate_key(['session_uuid','user_uuid','event_uuid']) }}    AS unique_key,
+        *
     FROM user_sessions 
 
 )

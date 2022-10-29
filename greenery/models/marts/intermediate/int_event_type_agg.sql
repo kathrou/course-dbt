@@ -21,7 +21,7 @@ final AS (
         SUM(CASE WHEN event_type = 'package_shipped' THEN 1 ELSE 0 END) AS package_shipped,
         SUM(CASE WHEN event_type = 'page_view' THEN 1 ELSE 0 END) AS page_view
     FROM events
-    GROUP BY 1,2
+    {{ dbt_utils.group_by(n=2) }}
 
 )
 
